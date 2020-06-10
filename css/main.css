@@ -1,13 +1,72 @@
-body{
-	margin: 0 auto;
-	width: 960px;
-	background-color:#FFF;
-	overflow:scrool;
-	overflow-x:hidden;
-}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box; }
 
-#logo_topo{
-	width:89px;
-	height:111px;
-	background-image:url(imagens/logo.png);
-}
+body {
+  background-color: #FFF;
+  overflow: scrooll;
+  overflow-x: hidden; }
+
+#conteiner-top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  box-shadow: 2px 2px black; }
+
+#logo_topo {
+  height: 48px;
+  float: left; }
+
+#menu {
+  width: 500px;
+  display: table-cell; }
+
+.btmenu {
+  text-decoration: none;
+  display: table-cell;
+  width: 100px;
+  height: 48px;
+  margin: 0px;
+  padding: 1px 5px;
+  text-align: center;
+  vertical-align: middle;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer; }
+  .btmenu:hover {
+    opacity: 0.7;
+    background-color: #ddd; }
+
+#txtBusca {
+  float: left;
+  background-color: transparent;
+  padding-left: 5px;
+  font-size: 17px;
+  font-style: italic;
+  border: none;
+  height: 32px;
+  border: 1px #bbb solid;
+  width: 270px; }
+
+#btnBusca {
+  cursor: pointer;
+  height: 30px;
+  width: 30px; }
+
+#divBusca img {
+  float: left;
+  padding-left: 3px;
+  width: 30px;
+  height: 30px; }
+
+#divBusca {
+  border-radius: 8px;
+  height: 37px;
+  float: left;
+  padding-top: 7px; }
+
+/*# sourceMappingURL=main.css.map */
