@@ -1,0 +1,13 @@
+body{
+	margin: 0 auto;
+	width: 960px;
+	background-color:#FFF;
+	overflow:scrool;
+	overflow-x:hidden;
+}
+
+#logo_topo{
+	width:89px;
+	height:111px;
+	background-image:url(imagens/logo.png);
+}
