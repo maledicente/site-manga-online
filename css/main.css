@@ -1,6 +1,8 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   list-style-type: none;
   box-sizing: border-box; }
 
@@ -15,14 +17,14 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  box-shadow: 2px 2px black; }
+  box-shadow: 2px 2px #000; }
 
 #logo_topo {
   height: 48px;
   float: left; }
 
 #menu {
-  width: 500px;
+  width: 400px;
   display: table-cell; }
 
 .btmenu {
@@ -31,7 +33,7 @@ body {
   width: 100px;
   height: 48px;
   margin: 0px;
-  padding: 1px 5px;
+  padding: 1px 4px;
   text-align: center;
   vertical-align: middle;
   color: #000;
@@ -50,7 +52,7 @@ body {
   border: none;
   height: 32px;
   border: 1px #bbb solid;
-  width: 270px; }
+  width: 200px; }
 
 #btnBusca {
   cursor: pointer;
@@ -59,14 +61,53 @@ body {
 
 #divBusca img {
   float: left;
-  padding-left: 3px;
+  padding-left: 5px;
   width: 30px;
   height: 30px; }
+  #divBusca img:hover {
+    opacity: 0.7; }
 
 #divBusca {
   border-radius: 8px;
   height: 37px;
   float: left;
   padding-top: 7px; }
+
+#conteiner-principal {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.conteudo-principal {
+  width: 75%;
+  background-color: #000;
+  margin-top: 2em; }
+
+.banner-mangas {
+  min-height: 280px;
+  width: 65%;
+  background-color: green; }
+
+.conteiner-minimanga {
+  min-height: 280px;
+  width: 65%;
+  background-color: orange; }
+
+.top-manga {
+  min-height: 600px;
+  width: 35%;
+  background-color: purple;
+  float: right; }
+
+footer#rodape {
+  clear: both;
+  /*Limpa as divisões e faz com que o rodapé saia dos blocos do corpo e lateral*/
+  margin-top: 10px;
+  border-top: 1px solid #606060; }
+
+footer#rodape p {
+  text-align: center;
+  margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */
