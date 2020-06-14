@@ -13,12 +13,28 @@ body {
   overflow-x: hidden;
   font-family: arial,helvetica; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; }
+
 #conteiner-top {
   width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: space-between;
   box-shadow: 1px 1px #000; }
 
 #logo_topo {
@@ -48,17 +64,15 @@ body {
 #txtBusca {
   float: left;
   background-color: transparent;
-  padding-left: 4px;
   font-size: 14px;
-  border: none;
   height: 32px;
   border: 1px #bbb solid;
-  width: 170px; }
+  width: 190px; }
 
 #btnBusca {
   cursor: pointer;
   height: 30px;
-  width: 30px; }
+  width: 35px; }
 
 #divBusca img {
   float: left;
@@ -70,9 +84,7 @@ body {
 
 #divBusca {
   border-radius: 8px;
-  margin-left: 10%;
-  height: 37px;
-  float: left;
+  height: 30px;
   padding-top: 7px; }
 
 #conteiner-principal {
@@ -81,11 +93,11 @@ body {
   justify-content: center; }
 
 .conteudo-principal {
-  width: 90%;
+  width: 800px;
   margin-top: 1em; }
 
 .banner-mangas {
-  min-height: 250px;
+  min-height: 200px;
   width: 75%;
   padding: 3px; }
 
@@ -94,18 +106,19 @@ body {
   width: 100% !important; }
 
 .minimanga {
-  width: 75% x;
+  min-width: 75%;
   border: 1px solid black;
-  display: flex;
-  margin: 0 2px 0px 3px;
-  justify-content: space-between;
-  flex-flow: row wrap; }
+  display: grid;
+  margin: 0 1px 0px 1px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: x; }
 
 .miniatura {
   height: 180px;
-  width: 130px;
+  width: 120px;
   background-color: purple;
-  margin: 3px; }
+  margin: 3px;
+  border-radius: 5px; }
 
 span {
   font-size: 12px;
