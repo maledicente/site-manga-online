@@ -5,8 +5,8 @@
 
 <nav id="menu">
 	<a class='btmenu' href='index.php' target='_self'>HOME</a>
-	<a class='btmenu' href='index.php' target='_self'>Mangas</a>
-	<a class='btmenu' href='index.php' target='_self'>Ultimos lancamentos</a>
+	<a class='btmenu' href='index.php' target='_self'>Mangás</a>
+	<a class='btmenu' href='index.php' target='_self'>Lançamentos</a>
 	<a class='btmenu' href='index.php' target='_self'>Contato</a>
 </nav>
 
