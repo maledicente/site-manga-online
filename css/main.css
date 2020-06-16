@@ -1,17 +1,181 @@
-@charset "UTF-8";
+/* CSS Variables */
+:root {
+  --primary: #ddd;
+  --dark: #333;
+  --light: #fff;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+
 * {
   margin: 0;
   padding: 0;
   border: 0;
-  list-style-type: none;
-  box-sizing: border-box;
   text-decoration: none; }
 
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--dark); }
+
 body {
-  background-color: #FFF;
+  background: ccc;
   overflow: scrooll;
-  overflow-x: hidden;
-  font-family: arial,helvetica; }
+  overflow-x: hidden; }
+
+/* Grid */
+.grid {
+  display: grid; }
+
+.logo {
+  grid-area: logo;
+  background-color: red; }
+
+.nav {
+  grid-area: nav;
+  background-color: green; }
+
+.footer {
+  grid-area: footer; }
+
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.5 rem 1.3rem;
+  text-decoration: none;
+  border: 0; }
+
+img {
+  max-width: 100%; }
+
+.wrapper {
+  display: grid;
+  grid-gap: 17px;
+  grid-template-areas: "main-nav" "top-conteiner" "footer";
+  border: 1px solid black; }
+
+.main-nav {
+  display: grid;
+  grid-template-areas: "logo nav nav nav busca";
+  border: 1px solid black; }
+
+/* Navigation */
+.main-nav ul {
+  display: grid;
+  grid-gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid black; }
+
+.main-nav a {
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+  font-size: 1rem;
+  box-shadow: var(--shadow); }
+
+.main-nav a:hover {
+  background: var(--dark);
+  color: var(--light); }
+
+.busca img {
+  height: 30px; }
+
+.busca input {
+  background-color: transparent;
+  height: 32px;
+  font-size: 14px;
+  color: var(--light);
+  border: 1px solid black;
+  width: 190px; }
+
+/* Top Container */
+.top-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "banner banner top-box-a" "top-box-b top-box-b top-box-a" "top-box-b top-box-b top-box-a";
+  border: 1px solid black; }
+
+/* banner */
+.banner {
+  grid-area: banner;
+  min-height: 200px;
+  background: url("../imagens/banner/madara1.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  box-shadow: var(--shadow); }
+
+.banner h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+  color: var(--light); }
+
+.banner p {
+  font-size: 1.3rem;
+  margin-top: 0;
+  color: var(--light); }
+
+/* Top Box */
+.top-box {
+  background: var(--primary);
+  box-shadow: var(--shadow);
+  padding: 1.5rem; }
+
+.top-box-b {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: x;
+  row-gap: 10px;
+  align-items: center;
+  justify-items: center; }
+
+.top-box .price {
+  font-size: 2.5rem; }
+
+.miniatura img {
+  height: 140px; }
+
+/*.minimanga{
+	min-width: 75%;
+	border: 1px solid black;
+	display: grid;
+	margin: 0 1px 0px 1px;  
+  grid-template-columns: repeat(4,1fr);
+  gap: x; 
+}
+
+.miniatura{
+	height: 180px;
+	width: 120px;
+	background-color: purple;
+	margin: 3px;
+	border-radius: 5px;
+}
+span{
+	font-size: 12px;
+	color: white;
+	background-color: green; 
+	text-align: center;
+}
+.miniatura img{
+	height: 85%;
+	width: 100%;
+}*/
+/* Footer */
+footer {
+  margin-top: 2rem;
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem; }
 
 /* width */
 ::-webkit-scrollbar {
@@ -28,128 +192,5 @@ body {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; }
-
-#conteiner-top {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  box-shadow: 1px 1px #000; }
-
-#logo_topo {
-  height: 48px;
-  float: left; }
-
-#menu {
-  width: 350px;
-  display: table-cell; }
-
-.btmenu {
-  text-decoration: none;
-  display: table-cell;
-  width: 80px;
-  height: 48px;
-  margin: 0px;
-  padding: 1px 4px;
-  text-align: center;
-  vertical-align: middle;
-  color: #aaa;
-  font-weight: bold;
-  cursor: pointer; }
-  .btmenu:hover {
-    opacity: 0.7;
-    background-color: #ddd; }
-
-#txtBusca {
-  float: left;
-  background-color: transparent;
-  font-size: 14px;
-  height: 32px;
-  border: 1px #bbb solid;
-  width: 190px; }
-
-#btnBusca {
-  cursor: pointer;
-  height: 30px;
-  width: 35px; }
-
-#divBusca img {
-  float: left;
-  padding-left: 2px;
-  width: 30px;
-  height: 30px; }
-  #divBusca img:hover {
-    opacity: 0.7; }
-
-#divBusca {
-  border-radius: 8px;
-  height: 30px;
-  padding-top: 7px; }
-
-#conteiner-principal {
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.conteudo-principal {
-  width: 800px;
-  margin-top: 1em; }
-
-.banner-mangas {
-  min-height: 200px;
-  width: 75%;
-  padding: 3px; }
-
-.imgbanner {
-  display: block !important;
-  width: 100% !important; }
-
-.minimanga {
-  min-width: 75%;
-  border: 1px solid black;
-  display: grid;
-  margin: 0 1px 0px 1px;
-  grid-template-columns: repeat(4, 1fr);
-  gap: x; }
-
-.miniatura {
-  height: 180px;
-  width: 120px;
-  background-color: purple;
-  margin: 3px;
-  border-radius: 5px; }
-
-span {
-  font-size: 12px;
-  color: white;
-  background-color: green;
-  text-align: center; }
-
-.miniatura img {
-  height: 85%;
-  width: 100%; }
-
-.top-manga {
-  min-height: 635px;
-  width: 25%;
-  float: right;
-  padding: 4px;
-  border: 1px solid #000; }
-
-.top-manga header {
-  text-align: center;
-  background-color: green; }
-
-footer#rodape {
-  clear: both;
-  /*Limpa as divisões e faz com que o rodapé saia dos blocos do corpo e lateral*/
-  margin-top: 60px;
-  border-top: 1px solid #606060; }
-
-footer#rodape p {
-  text-align: center;
-  margin-top: 30px;
-  padding: 10px; }
 
 /*# sourceMappingURL=main.css.map */
