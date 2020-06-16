@@ -17,7 +17,7 @@ html {
   color: var(--dark); }
 
 body {
-  background: ccc;
+  background: bbb;
   overflow: scrooll;
   overflow-x: hidden; }
 
@@ -28,13 +28,13 @@ body {
 .nav {
   grid-area: nav; }
 
-.footer {
-  grid-area: footer; }
+.busca {
+  grid-area: busca; }
 
 .btn {
   background: var(--dark);
   color: var(--light);
-  padding: 0.4 rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   border: 0; }
 
 img {
@@ -64,7 +64,7 @@ img {
   background: var(--primary);
   display: block;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.3rem;
   text-align: center;
   color: var(--dark);
   text-transform: uppercase;
@@ -89,7 +89,7 @@ img {
   font-size: 13px;
   color: var(--light);
   box-shadow: var(--shadow);
-  width: 190px; }
+  width: 200px; }
 
 /* Top Container */
 .top-container {
@@ -121,7 +121,7 @@ img {
   color: var(--light); }
 
 .banner p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-top: 0;
   color: var(--light); }
 
@@ -139,7 +139,7 @@ img {
 
 .top-box-b {
   grid-area: top-box-b;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: x;
   align-items: center;
   justify-items: center;
@@ -149,9 +149,12 @@ img {
   font-size: 2.5rem; }
 
 .miniatura {
-  justify-content: space-between; }
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: var(--shadow); }
   .miniatura:hover {
-    opacity: 0.8; }
+    opacity: 0.8;
+    box-shadow: var(--light); }
 
 .miniatura img {
   height: 140px; }
@@ -164,13 +167,42 @@ img {
   border: 1px solid #555; }
 
 /* Footer */
-footer {
-  margin-top: 2rem;
+.footer {
+  grid-area: footer;
+  margin-top: 4rem;
   background: var(--dark);
   color: var(--light);
   text-align: center;
-  padding: 1rem; }
+  padding: 3rem; }
 
+/* Media Queries */
+@media (max-width: 700px) {
+  .top-container {
+    grid-template-areas: 'banner banner' 'top-box-a top-box-b';
+    width: 95%;
+    margin: auto; }
+
+  .banner h1 {
+    font-size: 2.5rem; }
+
+  .main-nav ul {
+    grid-template-columns: 1fr; }
+
+  .btn {
+    display: block;
+    text-align: center;
+    margin: auto; } }
+@media (max-width: 500px) {
+  .banner h1 {
+    font-size: 1.5rem; }
+
+  .main-nav {
+    grid-template-areas: 'logo' 'nav' 'busca'; }
+
+  .top-container {
+    grid-template-areas: 'banner' 'top-box-a' 'top-box-b';
+    width: 95%;
+    margin: auto; } }
 /* width */
 ::-webkit-scrollbar {
   width: 8px; }
