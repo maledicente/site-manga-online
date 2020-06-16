@@ -95,7 +95,9 @@ img {
 .top-container {
   display: grid;
   grid-gap: 20px;
-  grid-template-areas: "banner banner top-box-a" "top-box-b top-box-b top-box-a"; }
+  grid-template-areas: "banner banner top-box-a" "top-box-b top-box-b top-box-a";
+  width: 90%;
+  margin: auto; }
 
 /* banner */
 .banner {
@@ -139,7 +141,6 @@ img {
   grid-area: top-box-b;
   grid-template-columns: repeat(7, 1fr);
   gap: x;
-  row-gap: 8px;
   align-items: center;
   justify-items: center;
   font-size: 0.9rem; }
