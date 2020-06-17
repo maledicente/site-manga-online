@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css"/>
     <meta name="author" content="Luiz Paulo Nievola">
     <link rel="icon" href="imagens/icon.png">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="js/main.js"></script>
   </head>
   <body>
     
@@ -31,7 +31,7 @@
         </ul>
         
         <div class="busca">
-          <input id="buscador" type="text" placeholder="Buscar..."/>
+          <input type="text" placeholder="Buscar..."/>
           <img src="imagens/search.png" id="btnBusca" alt="Buscar"/>
           <img src="imagens/user.png" id="btnBusca" alt="user"/>
         </div>
@@ -40,6 +40,10 @@
       <!-- Top Container -->
       <section class="top-container">
         <header class="banner">
+          <div class="divBnt">
+            <button class="btSlider" onclick="troca(-1)"><</button>
+            <button class="btSlider" onclick="troca(1)">></button>
+          </div>
           <h1>Confira este manga</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
           <a href="#" class="btn">Leia mais</a>
@@ -75,7 +79,9 @@
           <a href="" class="btn">Compre agora</a>
         </div>
         <div class="top-box top-box-b">
-          <!--<h4>Mangas mais lidos</h4> -->
+
+          <h4>Mangas mais lidos</h4> 
+
           <div class="miniatura">
             <a href="#"><img src="imagens/5e11c803-ChainsawMan.jpg" alt=""></a>
             <a href="#"><span class="btn" >Chainsaw Man</a></span>
