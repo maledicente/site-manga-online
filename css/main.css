@@ -60,7 +60,7 @@ body {
   background: var(--primary);
   display: block;
   text-decoration: none;
-  padding: 0.3rem;
+  padding: 0.2rem;
   text-align: center;
   color: var(--dark);
   text-transform: uppercase;
@@ -84,7 +84,7 @@ body {
   font-size: 13px;
   color: var(--light);
   box-shadow: var(--shadow);
-  width: 200px; }
+  width: 170px; }
 
 /* Top Container */
 .top-container {
@@ -119,7 +119,9 @@ body {
   cursor: pointer;
   color: var(--light);
   border: none;
-  height: 30%; }
+  height: 50%;
+  padding: 1px;
+  font-weight: bold; }
 
 .divBnt {
   display: flex;
@@ -190,19 +192,23 @@ body {
 @media (max-width: 700px) {
   .top-container {
     grid-template-areas: 'banner banner' 'top-box-a top-box-b';
-    width: 95%;
+    width: 97%;
     margin: auto; }
 
   .banner h1 {
     font-size: 2.5rem; }
 
   .main-nav ul {
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr;
+    grid-gap: 15px; }
 
   .btn {
     display: block;
     text-align: center;
-    margin: auto; } }
+    margin: auto; }
+
+  .busca input {
+    width: 180px; } }
 @media (max-width: 500px) {
   .banner h1 {
     font-size: 1.5rem; }
@@ -210,13 +216,20 @@ body {
   .main-nav {
     grid-template-areas: 'logo nav' 'nav nav' 'busca busca'; }
 
+  .main-nav ul {
+    grid-template-columns: 1fr;
+    grid-gap: 10px; }
+
   .man-nav a {
     padding: 0.2rem; }
 
   .top-container {
     grid-template-areas: 'banner' 'top-box-a' 'top-box-b';
-    width: 95%;
-    margin: auto; } }
+    width: 97%;
+    margin: auto; }
+
+  .busca input {
+    width: 150px; } }
 /* width */
 ::-webkit-scrollbar {
   width: 8px; }

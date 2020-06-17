@@ -43,7 +43,7 @@ function troca(dir){
 
 function anima(){
 	tempoTroca++;
-	if(tempoTroca >= 500){
+	if(tempoTroca >= 1000){
 		tempoTroca=0;
 		troca(1);
 	}
