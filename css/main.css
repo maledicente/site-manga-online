@@ -90,7 +90,7 @@ body {
 .top-container {
   display: grid;
   grid-gap: 10px;
-  grid-template-areas: "banner banner top-box-a" "top-box-b top-box-b top-box-a";
+  grid-template-areas: "banner banner propaganda" "top-box-b top-box-b top-box-a";
   width: 90%;
   max-width: 1200px;
   margin: auto; }
@@ -98,8 +98,7 @@ body {
 /* banner */
 .banner {
   grid-area: banner;
-  min-height: 130px;
-  /*background: url("../imagens/banner/madara1.jpg");*/
+  min-height: 200px;
   background-size: cover;
   transition: background-image 1s;
   background-position: center;
@@ -110,6 +109,15 @@ body {
   justify-content: center;
   box-shadow: var(--shadow); }
   .banner:hover {
+    opacity: 0.9; }
+
+.propaganda {
+  grid-area: propaganda;
+  background-image: url("../imagens/propaganda.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--shadow); }
+  .propaganda:hover {
     opacity: 0.9; }
 
 .btSlider {
