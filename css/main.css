@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 /* CSS Variables */
 :root {
   --primary: #ddd;
@@ -9,96 +10,85 @@
   margin: 0;
   padding: 0;
   border: 0;
-  text-decoration: none; }
+  outline: 0;
+  text-decoration: none;
+  box-sizing: border-box; }
 
 html {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--dark); }
+  /*A cada 1rem sera considerado 10px*/
+  font-size: 62.5%;
+  color: var(--dark);
+  overflow: scrooll;
+  overflow-x: hidden;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased; }
 
 body {
-  background: bbb;
-  overflow: scrooll;
-  overflow-x: hidden; }
+  font-size: 1.6rem;
+  background-color: var(--primary);
+  font-family: "Source Sans Pro"; }
 
-/* Grid */
-.logo {
-  grid-area: logo; }
-
-.nav {
-  grid-area: nav; }
-
-.busca {
-  grid-area: busca; }
-
-.btn {
-  background: var(--dark);
-  color: var(--light);
-  padding: 0.3rem 1.2rem; }
-
-.wrapper {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-areas: "main-nav" "top-conteiner" "footer"; }
-
-.main-nav {
-  display: grid;
-  grid-template-areas: "logo nav nav nav busca";
-  box-shadow: var(--shadow);
+header .container {
+  display: flex;
   align-items: center;
-  justify-items: center; }
+  justify-content: space-between;
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+  background-color: #ccc; }
 
-/* Navigation */
-.main-nav ul {
-  display: grid;
-  grid-gap: 20px;
-  padding: 0;
-  list-style: none;
-  grid-template-columns: repeat(4, 1fr); }
+header {
+  background-color: #7159c1;
+  margin-bottom: 1rem; }
 
-.main-nav a {
-  background: var(--primary);
-  display: block;
-  text-decoration: none;
-  padding: 0.2rem;
-  text-align: center;
-  color: var(--dark);
-  text-transform: uppercase;
-  font-size: 1rem;
-  box-shadow: var(--shadow); }
+header img {
+  width: 50px;
+  margin-left: 20px;
+  padding: 5px 0; }
 
-.main-nav a:hover {
-  background: var(--dark);
-  color: var(--light); }
+header nav {
+  float: left; }
 
-.busca {
+header nav ul {
   display: flex; }
 
-.busca img {
-  height: 30px;
-  margin-left: 5px; }
+header nav ul li {
+  list-style: none; }
 
-.busca input {
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  padding: 2.4rem;
+  transition: all 250ms linear 0s; }
+
+header nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.15); }
+
+header form .busca {
   background-color: transparent;
   height: 30px;
-  font-size: 13px;
+  font-size: 1.4rem;
   color: var(--light);
   box-shadow: var(--shadow);
-  width: 170px; }
+  width: 150px;
+  float: right; }
 
-/* Top Container */
-.top-container {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-areas: "banner banner propaganda" "top-box-b top-box-b top-box-a";
+section.hero {
+  margin: 80px 0; }
+
+section.hero {
   width: 90%;
-  max-width: 1200px;
-  margin: auto; }
+  max-width: 980px;
+  margin: auto;
+  display: flex; }
 
 /* banner */
-.banner {
-  grid-area: banner;
-  min-height: 200px;
+section.hero .banner {
+  min-height: 250px;
+  width: 70%;
+  margin-right: 1rem;
   background-size: cover;
   transition: background-image 1s;
   background-position: center;
@@ -108,16 +98,17 @@ body {
   align-items: start;
   justify-content: center;
   box-shadow: var(--shadow); }
-  .banner:hover {
+  section.hero .banner:hover {
     opacity: 0.9; }
 
-.propaganda {
-  grid-area: propaganda;
+section.hero .propaganda {
+  min-height: 250px;
   background-image: url("../imagens/propaganda.jpg");
   background-size: cover;
+  width: 30%;
   background-position: center;
   box-shadow: var(--shadow); }
-  .propaganda:hover {
+  section.hero .propaganda:hover {
     opacity: 0.9; }
 
 .btSlider {
@@ -149,30 +140,39 @@ body {
   color: var(--light);
   text-shadow: black 0.1em 0.1em 0.2em; }
 
-/* Top Box */
-.top-box {
+/* Top Container */
+main {
   display: grid;
-  align-items: center;
-  justify-items: center;
+  grid-gap: 20px;
+  grid-template-areas: "miniaturas miniaturas top-box-10" "miniaturas miniaturas top-box-10";
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: green; }
+
+/* Top Box */
+.grid {
+  display: grid;
   background: var(--primary);
-  box-shadow: var(--shadow);
-  padding: 1.3rem; }
+  box-shadow: var(--shadow); }
 
-.top-box-a {
-  grid-area: top-box-a; }
-
-.top-box-b {
-  grid-area: top-box-b;
+.miniaturas {
+  grid-area: miniaturas;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: x;
-  font-size: 0.8rem; }
+  font-size: 1rem; }
+
+.top-box-10 {
+  grid-area: top-box-b; }
 
 .price {
   font-size: 2.3rem; }
 
 .miniatura {
   justify-content: space-between;
-  box-shadow: var(--shadow); }
+  box-shadow: var(--shadow);
+  border: 1px solid #555; }
   .miniatura:hover {
     opacity: 0.8;
     box-shadow: var(--light); }
@@ -184,8 +184,17 @@ body {
   display: grid;
   align-items: center;
   justify-items: center;
-  text-align: center;
-  border: 1px solid #555; }
+  text-align: center; }
+
+.btn {
+  background: var(--dark);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0; }
+
+span {
+  font-size: 12px; }
 
 /* Footer */
 .footer {
@@ -196,48 +205,6 @@ body {
   text-align: center;
   padding: 3rem; }
 
-/* Media Queries */
-@media (max-width: 700px) {
-  .top-container {
-    grid-template-areas: 'banner banner' 'top-box-a top-box-b';
-    width: 97%;
-    margin: auto; }
-
-  .banner h1 {
-    font-size: 2.5rem; }
-
-  .main-nav ul {
-    grid-template-columns: 1fr;
-    grid-gap: 15px; }
-
-  .btn {
-    display: block;
-    text-align: center;
-    margin: auto; }
-
-  .busca input {
-    width: 180px; } }
-@media (max-width: 500px) {
-  .banner h1 {
-    font-size: 1.5rem; }
-
-  .main-nav {
-    grid-template-areas: 'logo nav' 'nav nav' 'busca busca'; }
-
-  .main-nav ul {
-    grid-template-columns: 1fr;
-    grid-gap: 10px; }
-
-  .man-nav a {
-    padding: 0.2rem; }
-
-  .top-container {
-    grid-template-areas: 'banner' 'top-box-a' 'top-box-b';
-    width: 97%;
-    margin: auto; }
-
-  .busca input {
-    width: 150px; } }
 /* width */
 ::-webkit-scrollbar {
   width: 8px; }
