@@ -41,12 +41,10 @@ header {
 
 header img {
   width: 50px;
-  padding: 5px 0;
-  background-color: red; }
+  padding: 5px 0; }
 
 header nav ul {
-  display: flex;
-  background-color: red; }
+  display: flex; }
 
 header nav ul li {
   list-style: none; }
@@ -69,8 +67,7 @@ header nav ul li a:hover {
   height: 40px;
   font-size: 1.4rem;
   color: var(--light);
-  box-shadow: var(--shadow);
-  background-color: red; }
+  box-shadow: var(--shadow); }
 
 .busca {
   width: 70%;
@@ -81,8 +78,7 @@ section.hero {
   width: 90%;
   max-width: 980px;
   margin: auto;
-  display: flex;
-  background-color: green; }
+  display: flex; }
 
 /* BANNER */
 .banner {
@@ -104,6 +100,7 @@ section.hero {
 /* PROPAGANDA */
 .propaganda {
   min-height: 250px;
+  display: flex;
   background-image: url("../imagens/propaganda.jpg");
   background-size: cover;
   width: 30%;
@@ -161,35 +158,38 @@ main {
   justify-content: space-between;
   margin: auto;
   width: 100%;
-  color: var(--light);
-  background-color: purple; }
+  color: var(--light); }
 
 .toplidos {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 75%;
+  width: 70%;
+  flex-direction: column;
   margin-right: 1rem;
-  box-shadow: var(--shadow);
-  padding: 1rem;
-  background-color: orange; }
+  box-shadow: var(--shadow); }
+
+.mini-lidos {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 .top-10 {
   display: flex;
-  flex-flow: column-nowrap;
-  width: 25%;
-  box-shadow: var(--shadow);
-  background-color: yellow; }
+  align-items: center;
+  flex-direction: column;
+  width: 30%;
+  box-shadow: var(--shadow); }
 
 .miniatura img {
   height: 140px;
   width: 100px; }
 
 .miniatura a {
-  justify-items: center;
   text-align: center; }
 
 .h2-top {
+  display: block;
+  width: 100%;
   font-size: 2rem;
   box-shadow: var(--shadow);
   text-align: center;
@@ -198,10 +198,9 @@ main {
 
 .miniatura {
   display: flex;
-  height: 170px;
-  margin: 2px auto;
-  align-items: center;
+  margin: 1rem;
   flex-direction: column;
+  height: 170px;
   box-shadow: var(--shadow);
   border: 1px solid #555; }
   .miniatura:hover {
@@ -212,7 +211,6 @@ main {
   color: var(--light);
   background: var(--dark);
   padding: 0.6rem 1.1rem;
-  text-decoration: none;
   cursor: pointer; }
 
 span {
