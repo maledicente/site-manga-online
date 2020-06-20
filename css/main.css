@@ -19,9 +19,7 @@ html {
   font-size: 62.5%;
   color: var(--dark);
   overflow: scrooll;
-  overflow-x: hidden;
-  text-rendering: optimizelegibility;
-  -webkit-font-smoothing: antialiased; }
+  overflow-x: hidden; }
 
 body {
   font-size: 1.6rem;
@@ -62,7 +60,7 @@ header nav ul li a {
 header nav ul li a:hover {
   background: rgba(255, 255, 255, 0.15); }
 
-.busca {
+.form-busca {
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -71,13 +69,11 @@ header nav ul li a:hover {
   color: var(--light);
   box-shadow: var(--shadow); }
 
-.search {
+.busca {
   width: 70%;
   min-width: 130px;
-  height: 30px; }
-
-section.hero {
-  margin: 60px 0; }
+  height: 30px;
+  margin-right: 0.5rem; }
 
 section.hero {
   width: 90%;
@@ -86,7 +82,7 @@ section.hero {
   display: flex; }
 
 /* BANNER */
-section.hero .banner {
+.banner {
   min-height: 250px;
   width: 70%;
   margin-right: 1rem;
@@ -99,18 +95,19 @@ section.hero .banner {
   align-items: start;
   justify-content: center;
   box-shadow: var(--shadow); }
-  section.hero .banner:hover {
+  .banner:hover {
     opacity: 0.9; }
 
 /* PROPAGANDA */
-section.hero .propaganda {
+.propaganda {
   min-height: 250px;
   background-image: url("../imagens/propaganda.jpg");
   background-size: cover;
   width: 30%;
+  padding: 1rem;
   background-position: center;
   box-shadow: var(--shadow); }
-  section.hero .propaganda:hover {
+  .propaganda:hover {
     opacity: 0.9; }
 
 .btSlider {
@@ -142,6 +139,9 @@ section.hero .propaganda {
   color: var(--light);
   text-shadow: black 0.1em 0.1em 0.2em; }
 
+.banner a {
+  margin-top: 1rem; }
+
 /* Top Container */
 main {
   width: 90%;
@@ -170,7 +170,7 @@ main {
 
 .top-10 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: 1fr;
   width: 30%;
   box-shadow: var(--shadow); }
 
@@ -186,14 +186,16 @@ main {
   text-align: center; }
 
 .h2-top {
-  display: flex;
+  font-size: 2rem;
   box-shadow: var(--shadow);
   text-align: center;
-  height: 70px; }
+  height: 40px;
+  background-color: #7159c1; }
 
 .miniatura {
   display: flex;
-  margin: auto;
+  height: 170px;
+  margin: 2px auto;
   align-items: center;
   flex-direction: column;
   box-shadow: var(--shadow);
@@ -203,11 +205,10 @@ main {
     box-shadow: var(--light); }
 
 .btn {
-  background: var(--dark);
   color: var(--light);
-  padding: 0.7rem 1.3rem;
+  background: var(--dark);
+  padding: 0.6rem 1.1rem;
   text-decoration: none;
-  border: 0;
   cursor: pointer; }
 
 span {
@@ -218,8 +219,8 @@ span {
 
 /* Footer */
 .footer {
-  grid-area: footer;
-  display: columns;
+  display: grid;
+  flex-direction: columns;
   align-items: center;
   margin-top: 4rem;
   background: var(--dark);
@@ -231,7 +232,8 @@ span {
   height: 30px; }
 
 .footer p {
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  display: block; }
 
 /* width */
 ::-webkit-scrollbar {
